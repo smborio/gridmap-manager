@@ -1,0 +1,30 @@
+$outer-margin: 1%;
+$deep-blue: #000080; // Deep blue for the "margin" area
+$content-bg: #FFFFFF; // White or any color you prefer for the content background
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: $deep-blue;
+    padding: $outer-margin;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex; // Make .content also a flex container
+    flex-direction: column; // Stack children vertically, change to row for horizontal
+    width: 100%; // Take the full width of the parent container
+    max-width: calc(100vw - 2 * $outer-margin); // Ensure the content respects the padding of the parent
+    height: 100%; // Take the full width of the parent container
+    max-height: calc(100vw - 2 * $outer-margin); // Ensure the content respects the padding of the parent
+    background-color: $content-bg;
+    // Add padding inside .content if needed
+}
+
+.section {
+    flex: 1; // Each section takes equal space, adjust as needed
+    // Add other styles like padding, borders, etc.
+}
