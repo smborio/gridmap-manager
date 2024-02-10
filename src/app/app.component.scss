@@ -1,6 +1,6 @@
 $outer-margin: 1%;
-$deep-blue: #000080; // Deep blue for the "margin" area
-$content-bg: #FFFFFF; // White or any color you prefer for the content background
+$deep-blue: #000080;
+$content-bg: #FFFFFF;
 
 :host {
     display: flex;
@@ -14,17 +14,65 @@ $content-bg: #FFFFFF; // White or any color you prefer for the content backgroun
 }
 
 .content {
-    display: flex; // Make .content also a flex container
-    flex-direction: column; // Stack children vertically, change to row for horizontal
-    width: 100%; // Take the full width of the parent container
-    max-width: calc(100vw - 2 * $outer-margin); // Ensure the content respects the padding of the parent
-    height: 100%; // Take the full width of the parent container
-    max-height: calc(100vw - 2 * $outer-margin); // Ensure the content respects the padding of the parent
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: calc(100vw - 2 * $outer-margin);
+    height: 100%;
+    max-height: calc(100vw - 2 * $outer-margin);
     background-color: $content-bg;
-    // Add padding inside .content if needed
 }
 
-.section {
-    flex: 1; // Each section takes equal space, adjust as needed
-    // Add other styles like padding, borders, etc.
+.section-top {
+    display: flex; // Ensures top sections are laid out side by side
+    flex: 1; // Adjust this as needed for the top section ratio within the .content container
+    width: 100%; // Ensures it takes the full width of its parent
+
+    .top-left, .top-middle, .top-right {
+        display: flex;
+        justify-content: center; // Center content horizontally
+        align-items: center; // Center content vertically
+        flex: 1; // Each top section takes equal width
+        height: 100%; // Ensure these sections take full height of their container
+        // Additional unique styles for each section
+    }
+
+    .top-left {
+        background-color: #ffcccc;
+    }
+
+    .top-middle {
+        background-color: #ccffcc;
+    }
+
+    .top-right {
+        background-color: #ccccff;
+    }
+}
+
+
+.section-bottom {
+    display: flex;
+    flex: 7; // Adjust this as needed for the bottom section ratio
+    justify-content: center;
+    align-items: center;
+
+    .bottom-left,
+    .bottom-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; // Ensure each bottom section takes the full height of its container
+        // Additional styles for each subsection
+    }
+
+    .bottom-left {
+        flex: 4; // Adjusted for your desired 4:1 ratio within the bottom section
+        background-color: #ccfffd;
+    }
+
+    .bottom-right {
+        flex: 1; // Adjusted for your desired 4:1 ratio within the bottom section
+        background-color: #fdffcc;
+    }
 }
