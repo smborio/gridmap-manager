@@ -1,1 +1,3 @@
-<p>top-left works!</p>
+<button class="my-btn-primary" (click)="toggleMode()">Change Mode</button>
+
+<span style="margin-left: 10px;">{{ dmModeService.getDmMode() ? 'DM Mode' : 'Game Mode' }}</span>
