@@ -15,6 +15,15 @@ export class DmModeService {
 
   // Method to toggle the state of dmMode
   toggleDmMode(): void {
-    this.dmMode = !this.dmMode;
+    if (!this.dmMode) {
+      const passcode = prompt('Enter passcode to switch to DM Mode:');
+      if (passcode === '1234') {
+        this.dmMode = !this.dmMode;
+      } else {
+        alert('Incorrect passcode.');
+      }
+    } else {
+      this.dmMode = !this.dmMode; // Toggle directly if dmMode is already true
+    }
   }
 }
