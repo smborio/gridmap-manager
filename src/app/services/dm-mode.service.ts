@@ -17,7 +17,7 @@ export class DmModeService {
   toggleDmMode(): void {
     if (!this.dmMode) {
       const passcode = prompt('Enter passcode to switch to DM Mode:');
-      if (passcode === '1234') {
+      if (passcode === '') {
         this.dmMode = !this.dmMode;
       } else {
         alert('Incorrect passcode.');

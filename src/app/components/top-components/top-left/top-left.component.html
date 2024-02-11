@@ -1,3 +1,8 @@
-<button class="my-btn-primary" (click)="toggleMode()">Change Mode</button>
-
-<span style="margin-left: 10px;">{{ dmModeService.getDmMode() ? 'DM Mode' : 'Game Mode' }}</span>
+<div class="mode-toggle-container">
+    <div class="mode-button">
+        <button class="my-btn-primary" (click)="toggleMode()">Change Mode</button>
+    </div>
+    <div class="mode-text">
+        <p>{{ dmModeService.getDmMode() ? 'DM Mode' : 'Game Mode' }}</p>
+    </div>
+</div>
