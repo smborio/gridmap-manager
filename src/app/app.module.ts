@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TopLeftComponent } from './components/top-components/top-left/top-left.component';
 import { TopRightComponent } from './components/top-components/top-right/top-right.component';
 import { BottomRightComponent } from './components/bottom-components/bottom-right/bottom-right.component';
+import { TopMiddleComponent } from './components/top-components/top-middle/top-middle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopLeftComponent,
     TopRightComponent,
-    BottomRightComponent
+    BottomRightComponent,
+    TopMiddleComponent
   ],
   imports: [
     BrowserModule,

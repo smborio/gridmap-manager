@@ -17,4 +17,14 @@ export class AddCharacterService {
   getCharacterNames(): string[] {
     return this.characterNames;
   }
+
+  // Method to rotate the list of character names
+  rotateCharacterName(): void {
+    if (this.characterNames.length > 1) {
+      const firstCharacter = this.characterNames.shift(); 
+      if (firstCharacter !== undefined) {
+        this.characterNames.push(firstCharacter); 
+      }
+    }
+  }
 }
