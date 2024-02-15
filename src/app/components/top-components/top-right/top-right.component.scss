@@ -3,7 +3,7 @@
     height: 100%;
 }
 
-.mode-toggle-container {
+.add-character-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@
     height: 100%;
 
 
-    .mode-button{
+    .mode-add-button{
         flex: 1;
         margin: 0;
         padding: 0;
@@ -19,7 +19,7 @@
         text-align: center;
     }
 
-    .mode-text {
+    .mode-text-box {
         flex: 1;
         margin: 0;
         padding: 0;
@@ -27,13 +27,20 @@
         text-align: center;
     }
 
-    .mode-button span,
-    .mode-text span {
+    .mode-add-button span,
+    .mode-text-box span {
         white-space: nowrap;
         overflow: hidden;
     }
 
     .mode-text p {
         margin: 0; /* Removes default paragraph margins */
+    }
+
+    .character-name-input {
+        width: 80%;
+        padding: 8px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
     }
 }
