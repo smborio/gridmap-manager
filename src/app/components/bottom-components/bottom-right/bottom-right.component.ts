@@ -14,4 +14,23 @@ export class BottomRightComponent implements OnInit {
   ngOnInit(): void {
     this.characterNames = this.addCharacterService.getCharacterNames();
   }
+
+  moveUp(index: number): void {
+    this.addCharacterService.moveCharacterUp(index);
+    this.updateCharacterList();
+  }
+
+  moveDown(index: number): void {
+    this.addCharacterService.moveCharacterDown(index);
+    this.updateCharacterList();
+  }
+
+  removeCharacter(index: number): void {
+    this.addCharacterService.removeCharacter(index);
+    this.updateCharacterList();
+  }
+
+  private updateCharacterList(): void {
+    this.characterNames = this.addCharacterService.getCharacterNames();
+  }
 }

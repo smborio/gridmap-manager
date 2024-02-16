@@ -1,0 +1,31 @@
+.character-list {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .character-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px; /* Space between entries */
+  }
+  
+  .character-item {
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px;
+    flex-grow: 1; /* Allow the box to grow and fill available space */
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    margin-left: 8px; /* Space between the box and icons */
+  }
+  
+  .icon-up, .icon-down, .icon-remove {
+    cursor: pointer;
+    margin-left: 8px; /* Space between icons */
+    user-select: none; /* Prevent text selection on click */
+  }

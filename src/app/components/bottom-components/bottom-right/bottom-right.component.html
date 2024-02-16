@@ -1,3 +1,17 @@
-<div *ngFor="let name of characterNames">
-    <p>{{ name }}</p>
+<div class="character-list">
+  <div *ngFor="let name of characterNames; let i = index; let first = first; let last = last" class="character-entry">
+    <div class="character-item">
+      <span>{{ name }}</span>
+    </div>
+    <div class="icons">
+      <!-- Up Arrow, not shown for the first item -->
+      <i *ngIf="!first" class="material-icons icon-up" (click)="moveUp(i)">arrow_upward</i>
+
+      <!-- Down Arrow, not shown for the last item -->
+      <i *ngIf="!last" class="material-icons icon-down" (click)="moveDown(i)">arrow_downward</i>
+
+      <!-- Remove Icon -->
+      <i class="material-icons icon-remove" (click)="removeCharacter(i)">close</i>
+    </div>
   </div>
+</div>
