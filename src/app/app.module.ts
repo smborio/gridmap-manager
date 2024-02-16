@@ -8,6 +8,7 @@ import { TopRightComponent } from './components/top-components/top-right/top-rig
 import { BottomRightComponent } from './components/bottom-components/bottom-right/bottom-right.component';
 import { TopMiddleComponent } from './components/top-components/top-middle/top-middle.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BottomLeftComponent } from './components/bottom-components/bottom-left/bottom-left.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     TopLeftComponent,
     TopRightComponent,
     BottomRightComponent,
-    TopMiddleComponent
+    TopMiddleComponent,
+    BottomLeftComponent
   ],
   imports: [
     BrowserModule,
