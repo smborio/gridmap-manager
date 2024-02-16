@@ -4,13 +4,12 @@
       <span>{{ name }}</span>
     </div>
     <div class="icons">
-      <!-- Up Arrow, not shown for the first item -->
+      <span *ngIf="first" class="icon-placeholder"></span>
       <i *ngIf="!first" class="material-icons icon-up" (click)="moveUp(i)">arrow_upward</i>
-
-      <!-- Down Arrow, not shown for the last item -->
+      
       <i *ngIf="!last" class="material-icons icon-down" (click)="moveDown(i)">arrow_downward</i>
-
-      <!-- Remove Icon -->
+      <span *ngIf="last" class="icon-placeholder"></span>
+      
       <i class="material-icons icon-remove" (click)="removeCharacter(i)">close</i>
     </div>
   </div>

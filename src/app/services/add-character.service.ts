@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AddCharacterService {
-  private characterNames: string[] = []; // This list is managed within the service
+  private characterNames: string[] = ['Zevick', 'Zeta', 'Tywin', 'Tonco', 'Tharmat']; // This list is managed within the service
 
   constructor() { }
 

@@ -1,31 +1,46 @@
 .character-list {
     padding: 0;
     list-style: none;
-  }
-  
-  .character-entry {
+}
+
+.character-entry {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px; /* Space between entries */
-  }
-  
-  .character-item {
-    background-color: #f0f0f0; /* Light gray background */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded corners */
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.character-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     padding: 8px;
-    flex-grow: 1; /* Allow the box to grow and fill available space */
-  }
-  
-  .icons {
+    width: 100px;
+    text-align: center;
+}
+
+.icons {
     display: flex;
     align-items: center;
-    margin-left: 8px; /* Space between the box and icons */
-  }
-  
-  .icon-up, .icon-down, .icon-remove {
+}
+
+.icon-placeholder,
+.icon-up,
+.icon-down,
+.icon-remove {
+    display: flex;
+    margin-left: 8px;
+    user-select: none;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    user-select: none;
+}
+
+.icon-up,
+.icon-down,
+.icon-remove {
     cursor: pointer;
-    margin-left: 8px; /* Space between icons */
-    user-select: none; /* Prevent text selection on click */
-  }
+}
